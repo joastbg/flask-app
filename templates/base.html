@@ -46,7 +46,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">MyPage</a>
+          <a class="navbar-brand" href="/"><span style="color: #FF0046">My</span><span style="color: #cecece; text-transform: none">Page<span style="color: #999; font-size: 0.7em"></span></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -58,25 +58,104 @@
           </ul>
 		  
 		<div class="input-group" style="margin-top: 5px;">
-		  <input type="text" class="form-control" placeholder="Search for...">
+		  <form action="/search" method="post">
+		  <input type="text" class="form-control" name="q" placeholder="Search for...">
+		  </form>
 		  <span class="input-group-btn">
 			<button class="btn btn-default" type="button">Go!</button>
 		  </span>
 		</div><!-- /input-group -->
  
 
- </div><!--/.nav-collapse -->
-		
-      </div>
-	  
-    </nav>
+	</div><!--/.nav-collapse -->
+	</div>
+	</nav>
 
-    <div class="container theme-showcase" role="main">
+    <div class="container theme-showcase" role="main" id="wrap">
 
 	{% block content %}{% endblock %}
 	
     </div> <!-- /container -->
 
+	
+	
+	
+	
+	
+	
+	
+	<!-- footer -->
+	<footer class="nb-footer">
+	<div class="container">
+	<div class="row">
+	<div class="col-sm-12">
+	<div class="about">
+	<p style="font-size: 2.5em;"><span style="color: #FF0046">My</span><span style="color: #cecece; text-transform: none">Page<span style="color: #999; font-size: 0.7em"></span></p>
+	
+	</div>
+	</div>
+
+	<div class="col-md-3 col-sm-6">
+	<div class="footer-info-single">
+		<h2 class="title">Help Center</h2>
+		<ul class="list-unstyled">
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> How to Pay</a></li>
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> Sitemap</a></li>
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> Delivery Info</a></li>
+		</ul>
+	</div>
+	</div>
+
+	<div class="col-md-3 col-sm-6">
+	<div class="footer-info-single">
+		<h2 class="title">Customer information</h2>
+		<ul class="list-unstyled">
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> About Us</a></li>
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> FAQ's</a></li>
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> Sell Your Items</a></li>
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> Contact Us</a></li>
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> RSS</a></li>
+		</ul>
+	</div>
+	</div>
+
+	<div class="col-md-3 col-sm-6">
+	<div class="footer-info-single">
+		<h2 class="title">Security & privacy</h2>
+		<ul class="list-unstyled">
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> Terms Of Use</a></li>
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> Privacy Policy</a></li>
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> Return / Refund Policy</a></li>
+			<li><a href="/" title=""><i class="fa fa-angle-double-right"></i> Store Locations</a></li>
+		</ul>
+	</div>
+	</div>
+
+	<div class="col-md-3 col-sm-6">
+	<div class="footer-info-single">
+		<h2 class="title">Payment</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. </p>
+		
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<section class="copyright">
+	<div class="container">
+	<div class="row">
+	<div class="col-sm-6">
+	<p>Copyright &copy; 2016 <a href="/">MyPage.com</a>. Powered by <a href="http://www.tubeprovider.com" target="parent">TubeProvider.com</a></p>
+	</div>
+	<div class="col-sm-6"></div>
+	</div>
+	</div>
+	</section>
+	</footer>
+	<!-- end footer -->
+	
+	
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

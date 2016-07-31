@@ -6,7 +6,7 @@ app = Flask(__name__, static_url_path='')
 def home():
     return render_template('index.html', headline="Most Recent Videos", page=1)
 	
-@app.route("/<page>")
+@app.route("/<page>", methods=['GET'])
 def home_page(page):
     return render_template('index.html', headline="Most Recent Videos", page=int(float(page)))
 
@@ -19,7 +19,6 @@ def videos():
 def video(id):
     #return "Hello videos!"	
 	return render_template('video.html', headline="Videos", id=id)
-
 
 @app.route("/categories")
 def categories():
@@ -36,10 +35,11 @@ def pornstars():
     #return "Hello actors!"
 	return render_template('actors.html', headline="Actors")
 	
-@app.route("/search")
+@app.route("/search", methods=['POST'])
 def search():
-    #return "Hello search!"
-	return render_template('search.html', headline="Search")
+    q = request.values['q']
+
+    return render_template('search.html', headline="Search", query=q)
 
 if __name__ == "__main__":
 	app.run(debug=True)
