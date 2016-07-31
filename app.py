@@ -23,12 +23,18 @@ def videos():
 	
 	return render_template('videos.html', headline="Videos", page=1, subtitles=subtitles)
 	
-@app.route("/videos/<page>")
-def videos_page(page):
+@app.route("/videos/<p>")
+def videos_page(p):
     #return "Hello videos!"
 	subtitles = """Most recent, Most viewed, Top rated, Longest, Shortest""".split(", ")
+	page = 1
 	
-	return render_template('videos.html', headline="Videos", page=int(float(page)), subtitles=subtitles)
+	try:
+		page = int(float(p))
+	except ValueError:
+		return render_template('videos.html', headline="Videos", page=1, subtitles=subtitles, subpage=p)
+	
+	return render_template('videos.html', headline="Videos", page=int(float(p)), subtitles=subtitles, subpage="Most recent")
 	
 @app.route("/video/<id>")
 def video(id):

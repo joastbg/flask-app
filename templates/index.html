@@ -18,10 +18,10 @@
 		<div class="col-md-12" style="margin-bottom: 5px">
               <ul class="small-inline-menu">
 				{% for st in subtitles %}
-					{% if loop.index == 1 %}
-						<li class="active"><a href="#profile" data-toggle="tab">{{ st }}</a></li>
+					{% if st.lower().replace(" ", "-") == subpage %}
+						<li class="active"><a href="/videos/{{ st.replace(" ", "-") | lower }}">{{ st }}</a></li>
 					{% else %}
-						<li><a href="#profile" data-toggle="tab">{{ st }}</a></li>
+						<li><a href="/videos/{{ st.replace(" ", "-") | lower }}">{{ st }}</a></li>
 					{% endif %}
 				{% endfor %}
               </ul>
