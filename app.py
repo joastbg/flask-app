@@ -63,7 +63,7 @@ def pornstars():
 @app.route("/search", methods=['POST'])
 def search():
     q = request.values['q']
-    return render_template('search.html', headline="Search", query=q)
+    return render_template('search.html', headline="\"" + q + "\" Videos", query=q, page=1)
 
 if __name__ == "__main__":
 	app.run(debug=True)
