@@ -49,16 +49,26 @@
           <a class="navbar-brand" href="/"><span style="color: #FF0046">My</span><span style="color: #cecece; text-transform: none">Page<span style="color: #999; font-size: 0.7em"></span></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/videos">Videos</a></li>
-            <li><a href="/categories">Categories</a></li>
-			<li><a href="/channels">Channels</a></li>
-            <li><a href="/actors">Actors</a></li>
+          
+			
+			{% set navigation_bar = [
+				
+				('/videos', 'videos', 'Videos'),
+				('/categories', 'categories', 'Categories'),
+				('/channels', 'channels', 'Channels'),
+				('/actors', 'actors', 'Actors')
+			] -%}
+			{% set active_page = active_page|default('videos') -%}
+			
+		<ul class="nav navbar-nav">
+			{% for href, id, caption in navigation_bar %}
+            <li {% if id == active_page %} class="active"{% endif
+			  %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+			{% endfor %}
           </ul>
 		<div class="input-group" style="margin-top: 5px;">
 		  <form action="/search" method="post">
-		  <input style="margin-left: 7px; background: #202224; border-radius: 4px;" type="text" class="form-control" name="q" placeholder="Search for...">
+		  <input style="margin-left: 7px; background: #202224; border-radius: 4px; color: #999" type="text" class="form-control" name="q" placeholder="Search for...">
 		  </form>
 		  <span class="input-group-btn">
 			<button class="btn btn-default" type="button">Go!</button>

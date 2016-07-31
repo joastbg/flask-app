@@ -17,11 +17,9 @@ body {
   width: auto;
 }
 
-
-
-
-
-
+.active {
+	background: #222;
+}
 
 .thumbnail { 
 	margin: 0px;
