@@ -2,7 +2,7 @@
 {% block title %}MyPage{% endblock %}
 
 {% block content %}
-	<h4>{{ headline }} {{id}}</h4>
+	
 	
 	<!--
 	<ul>
@@ -15,15 +15,19 @@
 	
 	<div class="row">
 	
-	
-		<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+    <div class="col-md-8 col-md-offset-2">
+
+		<video id="my-video" class="video-js" controls preload="auto" width="720" height="480" poster="https://placehold.it/720x480" data-setup="{}">
 			<source src="/vids/SampleVideo_720x480_1mb.mp4" type='video/mp4'>
 			<p class="vjs-no-js">
 			To view this video please enable JavaScript, and consider upgrading to a web browser that
 			<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 			</p>
 		</video>
+		
+		<h4>{{ headline }} {{id}}</h4>
   
+    </div>
 	</div>
 		
 		

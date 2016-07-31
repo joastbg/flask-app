@@ -33,7 +33,7 @@
 		<div class="" style="text-align: center">
 		<ul class="pagination" style="margin-top: 30px">
               <li><a href="{{ page - 1 }}">Prev</a></li>
-              {% for i in range(page,page+8) %}
+              {% for i in range(page,page+7) %}
 			  {% if i == page %}
 			  <li class="active"><a href="/{{i}}">{{ i }}</a></li>
               {% else %}
@@ -42,7 +42,7 @@
 			  {% endfor %}
 			  <li><a href="/{{page + 10}}">...</a></li>
               <li><a href="/{{ page + 15 }}">{{ page + 15 }}</a></li>
-			  {% for i in range(page+20,page+25) %}
+			  {% for i in range(page+20,page+22) %}
               <li><a href="/{{i}}">{{i}}</a></li>
 			  {% endfor %}
               <li><a href="/{{page + 1 }}">Next</a></li>
