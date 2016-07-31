@@ -211,3 +211,40 @@ color: #999; }
 footer.nb-footer .copyright p {
 margin: 0;
 padding: 0; }
+
+
+/* Typeahead */
+
+
+.twitter-typeahead {
+	margin-top: 2px;
+	width: 670px;
+}
+
+.tt-menu {
+  position: relative;
+  color: #222;
+  top: 10px;
+  left: 15px;
+  margin-left: 8px;
+  display: none;
+  width: 668px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 2px;
+  padding-left: 7px;
+  padding: 3px;
+}
+
+.tt-menu.is-open {
+  display: block;
+}
+
+.tt-selectable {
+  cursor: pointer;
+}
+
+.tt-selectable + .tt-selectable {
+  border-top: 1px solid #ccd6dd;
+}
