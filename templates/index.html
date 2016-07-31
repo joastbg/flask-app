@@ -2,7 +2,7 @@
 {% block title %}MyPage{% endblock %}
 
 {% block content %}
-	<h1>{{ headline }}</h1>
+	<h4>{{ headline }}</h4>
 	
 	<!--
 	<ul>
@@ -13,6 +13,40 @@
 	<li><a href="/search">/search</a>
 	</ul>-->
 	
+	<div class="row">
 	
-
+		{% for i in range(0,20) %}
+		<div class="col-md-3 thumb" style="width: 220px">
+			<div class="col-sm-12 thumbnail text-left">                
+				<a href="/video/{{ i + 1 }}">                    
+					<img class="img-responsive" src="https://placehold.it/640x360" alt="">
+					<div class="caption_hd">        
+					</div>
+					<div class="caption">
+						<h4>Lorem ipsum dolor sit amet, consectetur</h4>
+					</div>
+				</a>
+			</div>
+		</div>  
+		{% endfor %}
+	
+		<div class="" style="text-align: center">
+		<ul class="pagination" style="margin-top: 30px">
+              <li><a href="{{ page - 1 }}">Prev</a></li>
+              {% for i in range(page,page+8) %}
+			  {% if i == page %}
+			  <li class="active"><a href="/{{i}}">{{ i }}</a></li>
+              {% else %}
+			  <li><a href="/{{i}}">{{ i }}</a></li>
+              {% endif %}
+			  {% endfor %}
+			  <li><a href="/{{page + 10}}">...</a></li>
+              <li><a href="/{{ page + 15 }}">{{ page + 15 }}</a></li>
+			  {% for i in range(page+20,page+25) %}
+              <li><a href="/{{i}}">{{i}}</a></li>
+			  {% endfor %}
+              <li><a href="/{{page + 1 }}">Next</a></li>
+            </ul>
+		</div>
+		
 {% endblock %}

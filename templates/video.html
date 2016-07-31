@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}MyPage{% endblock %}
+
+{% block content %}
+	<h4>{{ headline }} {{id}}</h4>
+	
+	<!--
+	<ul>
+	<li><a href="/videos">/videos</a>
+	<li><a href="/categories">/categories</a>
+	<li><a href="/channels">/channels</a>
+	<li><a href="/actors">/actors</a>
+	<li><a href="/search">/search</a>
+	</ul>-->
+	
+	<div class="row">
+	
+	
+		<video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+			<source src="/vids/SampleVideo_720x480_1mb.mp4" type='video/mp4'>
+			<p class="vjs-no-js">
+			To view this video please enable JavaScript, and consider upgrading to a web browser that
+			<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+			</p>
+		</video>
+  
+	</div>
+		
+		
+{% endblock %}
