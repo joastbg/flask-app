@@ -14,12 +14,15 @@
 	</ul>-->
 	
 	<div class="row">
-		<div class="col-md-12 col-md-offset-1">
-			{% for actor in hash['actors']  | slice(5) %}
+		<div class="col-md-12 col-md-offset-0 list-group">
+			{% for actor in hash['actors']  | slice(6) %}
 			<div class="col-md-2">
 			<ul>
 			{% for a in actor %}
-			<li><a href="#">{{ a }}</a></li>
+			<a href="#" class="list-group-item list-group-item-action active" style="margin-bottom: 15px">
+				<h5 class="list-group-item-heading">{{ a }}</h5>
+				<p class="list-group-item-text" style="font-size: 0.8em">Donec id elit non mi porta gravida at eget metus.</p>
+			</a>
 			
 			{% endfor %}
 			</ul>

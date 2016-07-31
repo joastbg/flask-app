@@ -15,12 +15,15 @@
 	
 	<div class="row">
 	
-		<div class="col-md-12 col-md-offset-1">
+		<div class="col-md-12 col-md-offset-0">
 	  {%- for j in range(0,180) | slice(6) %}
 		<div class="col-md-2">
 		<ul style="list-style: none">
 		{%- for k in j %}
-		  <li><a href="#">{{ k }}</a></li>
+			<a href="#" class="list-group-item list-group-item-action active" style="margin-bottom: 15px">
+				<h5 class="list-group-item-heading">Category {{ k }}</h5>
+				<p class="list-group-item-text" style="font-size: 0.8em">Donec id elit non mi porta gravida at eget metus.</p>
+			</a>
 		{%- endfor %}
 		</ul>
 		</div>

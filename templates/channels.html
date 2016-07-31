@@ -14,12 +14,16 @@
 	</ul>-->
 	
 	<div class="row">
-		<div class="col-md-12 col-md-offset-1">
+		<div class="col-md-12 col-md-offset-0">
 			{% for channel in hash['channels']  | slice(4) %}
-			<div class="col-md-3">
+			<div class="col-md-3 list-group">
 			<ul>
 			{% for c in channel %}
-			<li><a href="#">{{ c }}</a></li>
+			<!--<li style="background: #333"><a href="#">{{ c }}</a></li>-->
+			<a href="#" class="list-group-item list-group-item-action active" style="margin-bottom: 15px">
+				<h5 class="list-group-item-heading">{{ c }}</h5>
+				<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+			</a>
 			
 			{% endfor %}
 			</ul>

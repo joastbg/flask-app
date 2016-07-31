@@ -50,7 +50,7 @@ def channels():
 @app.route("/actors")
 def pornstars():
     #return "Hello actors!"
-	actors = ['Actor {0}'.format(x+1) for x in range(300)]
+	actors = ['Actor {0}'.format(x+1) for x in range(120)]
 	h = {"headline": "Actors", "actors": actors}
 	return render_template('actors.html', headline="Actors", hash=h)
 	
