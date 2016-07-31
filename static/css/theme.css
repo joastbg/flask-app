@@ -98,6 +98,32 @@ body {
 	font-size: 0.80em;
 }
 
+
+
+.small-inline-menu {
+	list-style: none;
+	display: block;
+}
+
+.small-inline-menu  > li {
+    float: left;
+}
+
+.small-inline-menu > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 4px 7px;
+	font-size: 0.8em;
+    text-decoration: none;
+	
+}
+
+.small-inline-menu > .active  {
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: 2px;
+}
+
 /*  
 Sticky Footer Solution
 by Steve Hatcher 

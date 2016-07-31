@@ -37,7 +37,7 @@
   <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -56,10 +56,9 @@
 			<li><a href="/channels">Channels</a></li>
             <li><a href="/actors">Actors</a></li>
           </ul>
-		  
 		<div class="input-group" style="margin-top: 5px;">
 		  <form action="/search" method="post">
-		  <input type="text" class="form-control" name="q" placeholder="Search for...">
+		  <input style="margin-left: 7px; background: #202224; border-radius: 4px;" type="text" class="form-control" name="q" placeholder="Search for...">
 		  </form>
 		  <span class="input-group-btn">
 			<button class="btn btn-default" type="button">Go!</button>
@@ -166,5 +165,14 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/js/ie10-viewport-bug-workaround.js"></script>
 	<script src="http://vjs.zencdn.net/5.10.7/video.js"></script>
+	
+	<script>
+	$('.row .btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $collapse = $this.closest('.collapse-group').find('.collapse');
+    $collapse.collapse('toggle');
+	});
+	</script>
   </body>
 </html>

@@ -4,17 +4,32 @@ app = Flask(__name__, static_url_path='')
 
 @app.route("/")
 def home():
-    return render_template('index.html', headline="Most Recent Videos", page=1)
+	
+    subtitles = """Most recent, Most viewed, Top rated, Longest, Shortest""".split(", ")
+		
+    return render_template('index.html', headline="Most Recent Videos", page=1, subtitles=subtitles)
 	
 @app.route("/<page>", methods=['GET'])
 def home_page(page):
-    return render_template('index.html', headline="Most Recent Videos", page=int(float(page)))
+
+    subtitles = """Most recent, Most viewed, Top rated, Longest, Shortest""".split(", ")
+
+    return render_template('index.html', headline="Most Recent Videos", page=int(float(page)), subtitles=subtitles)
 
 @app.route("/videos")
 def videos():
     #return "Hello videos!"
-	return render_template('videos.html', headline="Videos")
-
+	subtitles = """Most recent, Most viewed, Top rated, Longest, Shortest""".split(", ")
+	
+	return render_template('videos.html', headline="Videos", page=1, subtitles=subtitles)
+	
+@app.route("/videos/<page>")
+def videos_page(page):
+    #return "Hello videos!"
+	subtitles = """Most recent, Most viewed, Top rated, Longest, Shortest""".split(", ")
+	
+	return render_template('videos.html', headline="Videos", page=int(float(page)), subtitles=subtitles)
+	
 @app.route("/video/<id>")
 def video(id):
     #return "Hello videos!"	
@@ -42,7 +57,6 @@ def pornstars():
 @app.route("/search", methods=['POST'])
 def search():
     q = request.values['q']
-
     return render_template('search.html', headline="Search", query=q)
 
 if __name__ == "__main__":

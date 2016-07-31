@@ -15,19 +15,82 @@
 	
 	<div class="row">
 	
-    <div class="col-md-8 col-md-offset-2">
-
-		<video id="my-video" class="video-js" controls preload="auto" width="720" height="480" poster="https://placehold.it/720x480" data-setup="{}">
-			<source src="/vids/SampleVideo_720x480_1mb.mp4" type='video/mp4'>
-			<p class="vjs-no-js">
-			To view this video please enable JavaScript, and consider upgrading to a web browser that
-			<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-			</p>
-		</video>
 		
-		<h4>{{ headline }} {{id}}</h4>
-  
-    </div>
+	
+		<div class="col-md-8 col-md-offset-2">
+			<video id="my-video" class="video-js" controls preload="auto" width="720" height="480" poster="https://placehold.it/720x480" data-setup="{}">
+				<source src="/vids/SampleVideo_720x480_1mb.mp4" type='video/mp4'>
+				<p class="vjs-no-js">
+				To view this video please enable JavaScript, and consider upgrading to a web browser that
+				<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+				</p>
+			</video>
+			<h4>{{ headline }} {{id}}</h4>
+			
+			 
+			{% for i in range(8) %}
+			<span class="label label-default"><a href="#">Category {{ i + 1 }}</a></span>
+			{% endfor %}
+		</div>
+		
+		
+		<div class="col-md-10 col-md-offset-1" style="margin-top: 15px">
+		<h3>Suggested Videos</h3>
+		
+		{% for i in range(0,8) %}
+		<div class="col-md-3 thumb" style="width: 220px">
+			<div class="col-sm-12 thumbnail text-left">                
+				<a href="/video/{{ i + 1 }}">                    
+					<img class="img-responsive" src="https://placehold.it/640x360" alt="">
+					<div class="caption_hd">        
+					</div>
+					<div class="caption">
+						<h4>Lorem ipsum dolor sit amet, consectetur</h4>
+					</div>
+				</a>
+			</div>
+		</div>  
+	
+		{% endfor %}
+			</div>
+				<div class="col-md-10 col-md-offset-1" style="margin-top: 5px">
+			
+			<ul class="pager">
+                <li class="disabled"><a href="#">← Newer</a></li>
+                <li><a href="#">Older →</a></li>
+              </ul>
+		</div>
+		
+		<!--
+		<div class="col-md-10 col-md-offset-1" style="margin-top: 15px">
+	<div id="demo" class="collapse">
+	{% for i in range(0,8) %}
+		<div class="col-md-3 thumb" style="width: 220px">
+			<div class="col-sm-12 thumbnail text-left">                
+				<a href="/video/{{ i + 1 }}">                    
+					<img class="img-responsive" src="https://placehold.it/640x360" alt="">
+					<div class="caption_hd">        
+					</div>
+					<div class="caption">
+						<h4>Lorem ipsum dolor sit amet, consectetur</h4>
+					</div>
+				</a>
+			</div>
+		</div>  
+		{% endfor %}
+		</div>
+<div style="text-align: center">
+<a class="btn btn-primary" data-toggle="collapse" data-target="#demo">Show More</a>
+</div>
+</div>
+</div>-->
+		
+		
+		
+		
+		
+		
+		
 	</div>
 		
 		
