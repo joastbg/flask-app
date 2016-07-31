@@ -15,6 +15,17 @@
 	
 	<div class="row">
 	
+		<div class="col-md-12 col-md-offset-1">
+	  {%- for j in range(0,180) | slice(6) %}
+		<div class="col-md-2">
+		<ul style="list-style: none">
+		{%- for k in j %}
+		  <li><a href="#">{{ k }}</a></li>
+		{%- endfor %}
+		</ul>
+		</div>
+	  {%- endfor %}
+	</div>
 	</div>
 		
 {% endblock %}
