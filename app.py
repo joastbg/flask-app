@@ -5,28 +5,28 @@ app = Flask(__name__, static_url_path='')
 @app.route("/")
 def home():
 	
-    subtitles = """Most recent, Most viewed, Top rated, Longest, Shortest""".split(", ")
+    subtitles = """Most recent, Most popular, Top rated, Longest, Shortest""".split(", ")
 		
-    return render_template('index.html', headline="Most Recent Videos", page=1, subtitles=subtitles)
+    return render_template('index.html', headline="Most Recent Videos", page=1, subtitles=subtitles, subpage="most-recent")
 	
 @app.route("/<page>", methods=['GET'])
 def home_page(page):
 
-    subtitles = """Most recent, Most viewed, Top rated, Longest, Shortest""".split(", ")
+    subtitles = """Most recent, Most popular, Top rated, Longest, Shortest""".split(", ")
 
     return render_template('index.html', headline="Most Recent Videos", page=int(float(page)), subtitles=subtitles)
 
 @app.route("/videos")
 def videos():
     #return "Hello videos!"
-	subtitles = """Most recent, Most viewed, Top rated, Longest, Shortest""".split(", ")
+	subtitles = """Most recent, Most popular, Top rated, Longest, Shortest""".split(", ")
 	
-	return render_template('videos.html', headline="Videos", page=1, subtitles=subtitles)
+	return render_template('videos.html', headline="Videos", page=1, subtitles=subtitles, subpage="most-recent")
 	
 @app.route("/videos/<p>")
 def videos_page(p):
     #return "Hello videos!"
-	subtitles = """Most recent, Most viewed, Top rated, Longest, Shortest""".split(", ")
+	subtitles = """Most recent, Most popular, Top rated, Longest, Shortest""".split(", ")
 	page = 1
 	
 	try:
