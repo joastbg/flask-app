@@ -28,12 +28,16 @@ def categories():
 @app.route("/channels")
 def channels():
     #return "Hello channels!"
-	return render_template('channels.html', headline="Channels")
+	channels = ['Channel {0}'.format(x+1) for x in range(100)]
+	h = {"headline": "Channels", "channels": channels}
+	return render_template('channels.html', hash=h)
 	
 @app.route("/actors")
 def pornstars():
     #return "Hello actors!"
-	return render_template('actors.html', headline="Actors")
+	actors = ['Actor {0}'.format(x+1) for x in range(300)]
+	h = {"headline": "Actors", "actors": actors}
+	return render_template('actors.html', headline="Actors", hash=h)
 	
 @app.route("/search", methods=['POST'])
 def search():

@@ -14,7 +14,18 @@
 	</ul>-->
 	
 	<div class="row">
-	
-	</div>	
+		<div class="col-md-12 col-md-offset-1">
+			{% for actor in hash['actors']  | slice(5) %}
+			<div class="col-md-2">
+			<ul>
+			{% for a in actor %}
+			<li><a href="#">{{ a }}</a></li>
+			
+			{% endfor %}
+			</ul>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
 		
 {% endblock %}

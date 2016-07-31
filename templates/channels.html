@@ -2,7 +2,7 @@
 {% block title %}MyPage{% endblock %}
 
 {% block content %}
-	<h4>{{ headline }}</h4>
+	<h4>{{ hash['headline'] }}</h4>
 	
 	<!--
 	<ul>
@@ -14,7 +14,18 @@
 	</ul>-->
 	
 	<div class="row">
-	
+		<div class="col-md-12 col-md-offset-1">
+			{% for channel in hash['channels']  | slice(4) %}
+			<div class="col-md-3">
+			<ul>
+			{% for c in channel %}
+			<li><a href="#">{{ c }}</a></li>
+			
+			{% endfor %}
+			</ul>
+			</div>
+			{% endfor %}
+		</div>
 	</div>
 		
 {% endblock %}
