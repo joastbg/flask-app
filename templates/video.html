@@ -15,24 +15,43 @@
 	
 	<div class="row">
 	
-		
-	
 		<div class="col-md-8 col-md-offset-2">
-			<video id="my-video" class="video-js" controls preload="auto" width="720" height="480" poster="https://placehold.it/720x480" data-setup="{}">
+
+            <h3>{{ headline }} {{id}}</h3>
+			
+            <video id="my-video" class="video-js" controls preload="auto" width="720" height="480" poster="https://placehold.it/720x480" data-setup="{}">
 				<source src="/vids/SampleVideo_720x480_1mb.mp4" type='video/mp4'>
 				<p class="vjs-no-js">
 				To view this video please enable JavaScript, and consider upgrading to a web browser that
 				<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 				</p>
 			</video>
-			<h4>{{ headline }} {{id}}</h4>
 			
-			 
-			{% for i in range(8) %}
-			<span class="label label-default"><a href="#">Category {{ i + 1 }}</a></span>
-			{% endfor %}
+			
+			<div style="margin-top: 5px">
+			    {% for i in range(8) %}
+			    <span class="label label-default"><a href="#">Category {{ i + 1 }}</a></span>
+			    {% endfor %}
+            </div>
 		</div>
-		
+        <!--
+        <div class="col-md-2 col-md-offset-0">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action active">
+                <h5 class="list-group-item-heading">List group item heading</h5>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <h5 class="list-group-item-heading">List group item heading</h5>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <h5 class="list-group-item-heading">List group item heading</h5>
+                <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+              </a>
+            </div>
+        </div>
+        -->
 		
 		<div class="col-md-10 col-md-offset-1" style="margin-top: 15px">
 		<h3>Suggested Videos</h3>
